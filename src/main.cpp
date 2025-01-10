@@ -56,7 +56,13 @@ delay(3000);}
 
 
 
-
+/**
+ * @brief Swaps the vaiables
+ * 
+ * @param pointer_a int 0 the very first time
+ * @param pointer_b int 1 the very first time
+ * @param cached_value Stores the value of pointer_a, briefly
+ */
 void swap(int *pointer_a, int *pointer_b, int cached_value){
   cached_value = *pointer_a;
   *pointer_a = *pointer_b;
