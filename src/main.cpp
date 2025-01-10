@@ -7,6 +7,16 @@
 
 #include <Arduino.h>
 
+
+int pointer_a    = 0;
+int pointer_b    = 1;
+int cached_value = 0;
+
+
+void swap(int *pointer_a, int *pointer_b, int cached_value);
+
+
+
 void setup() {
   Serial.begin(9600);
 }
@@ -21,4 +31,31 @@ Serial.print("Value of pointer is ");
 Serial.print(*pointer);
 Serial.println();
 pointer++;;
+
+Serial.println("Before Swap:");
+Serial.print("a = ");
+Serial.println(pointer_a);
+Serial.print("b = ");
+Serial.println(pointer_b);
+
+
+swap(&pointer_a, &pointer_b, cached_value);
+
+Serial.println("After Swap");
+Serial.print("a = ");
+Serial.println(pointer_a);
+Serial.print("b = ");
+Serial.println(pointer_b);
+
+
 delay(3000);}
+
+
+
+
+void swap(int *pointer_a, int *pointer_b, int cached_value){
+  cached_value = *pointer_a;
+  *pointer_a = *pointer_b;
+  *pointer_b = cached_value;
+
+}
