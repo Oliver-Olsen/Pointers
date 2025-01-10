@@ -1,8 +1,12 @@
 //Oliver Olsen s205443
 //Nils Wulff   s223968
 
-// 13a The memory where the pointer is stored contains the address of where the pointer is "pointing"
-// 13b It first prints address of the first element as a HEX value. Next it prints the value of the first element of the array.
+/* 13a The memory where the pointer is stored contains the address of where the pointer is "pointing"
+*  13b It first prints address of the first element as a HEX value. Next it prints the value of the first element of the array.
+*  13c Every cycle the memory address read increases by 2, even after the array is finished. 
+*  This means the pointer is returning whatever data is in these unused memory addresses. 
+*  
+*/
 
 
 #include <Arduino.h>
